@@ -203,9 +203,9 @@ class VideoExtras(VideoExtrasBase):
 
     def findExtras(self, exitOnFirst=False, extrasDb=None, defaultFanArt=""):
         # Display the busy icon while searching for files
-        xbmc.executebuiltin("ActivateWindow(busydialog)")
+        xbmc.executebuiltin("ActivateWindow(busydialognocancel)")
         files = VideoExtrasBase.findExtras(self, exitOnFirst, extrasDb, defaultFanArt)
-        xbmc.executebuiltin("Dialog.Close(busydialog)")
+        xbmc.executebuiltin("Dialog.Close(busydialognocancel)")
         return files
 
     # Enable and disable the display of the extras button
