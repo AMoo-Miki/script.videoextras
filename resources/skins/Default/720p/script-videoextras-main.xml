@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="3001">
 	<!-- The following property allows TvTunes to keep playing when this window is displayed -->
-	<onload condition="!IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
-	<onload condition="IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
+	<onload condition="!String.IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "TvShows")</onload>
+	<onload condition="String.IsEmpty(ListItem.TvShowTitle)">SetProperty("TvTunesSupported", "Movies")</onload>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -14,7 +14,7 @@
 			<height>720</height>
 			<aspectratio>scale</aspectratio>
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-			<visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			<visible>!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(ListItem.Property(Fanart_Image))</visible>
 			<!-- include: Window_OpenClose_Animation -->		
 			<animation effect="fade" time="250">WindowOpen</animation>
 			<animation effect="fade" time="250">WindowClose</animation>
@@ -100,7 +100,7 @@
 				<scroll>false</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
-				<visible>!IsEmpty(ListItem.Title)</visible>
+				<visible>!String.IsEmpty(ListItem.Title)</visible>
 				<label>[COLOR=FF0084ff] - [/COLOR] $INFO[ListItem.Title]</label>
 			</control>
 		</control>
@@ -151,7 +151,7 @@
 						<selectedcolor>FFEB9E17</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
@@ -203,7 +203,7 @@
 						<selectedcolor>FFEB9E17</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
@@ -248,7 +248,7 @@
 			<orientation>horizontal</orientation>
 			<align>left</align>
 			<itemgap>5</itemgap>
-			<visible>!IsEmpty(ListItem.Plot)</visible>
+			<visible>!String.IsEmpty(ListItem.Plot)</visible>
 			<control type="label">
 				<posx>0</posx>
 				<posy>0</posy>
