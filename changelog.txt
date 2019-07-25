@@ -1,3 +1,6 @@
+v119.07.25 (2019-07-25)
+- Update for support of Kodi 18 (Leia)
+
 v100.6.0 (2019-04-24)
 - Remove urepo link
 
