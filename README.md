@@ -11,4 +11,4 @@ VideoExtras is an addon that allows you to list and view your DVD or Bluray extr
 
 For more details on how to use VideoExtras please refer to the wiki:
 
-[Add-on:VideoExtras](https://github.com/robwebset/script.videoextras/wiki)
+[Add-on:VideoExtras](https://github.com/malvinas2/script.videoextras/wiki)
