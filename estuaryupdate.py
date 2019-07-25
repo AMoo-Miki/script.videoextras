@@ -124,7 +124,7 @@ class EstuaryUpdate():
 \t\t\t\t\t\t<param name="label" value="$ADDON[script.videoextras 32001]" />
 \t\t\t\t\t\t<param name="onclick_1" value="Action(close)" />
 \t\t\t\t\t\t<param name="onclick_2" value="RunScript(script.videoextras,display,$INFO[ListItem.FilenameAndPath])" />
-\t\t\t\t\t\t<param name="visible" value="System.HasAddon(script.videoextras) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))" />'''
+\t\t\t\t\t\t<param name="visible" value="System.HasAddon(script.videoextras) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)] + String.IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))" />'''
 
         insertTxt = previousButton + (DIALOG_VIDEO_INFO_BUTTON % idval)
         dialogXmlStr = dialogXmlStr.replace(previousButton, insertTxt)
