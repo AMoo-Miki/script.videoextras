@@ -309,9 +309,10 @@ class VideoExtrasWindow(xbmcgui.WindowXML):
     # Static method to create the Window class
     @staticmethod
     def createVideoExtrasWindow(files):
-        return VideoExtrasWindow("script-videoextras-main.xml", ADDON.getAddonInfo('path').decode("utf-8"), files=files)
+        return VideoExtrasWindow('script-videoextras-main.xml', ADDON.getAddonInfo('path').decode("utf-8"), 'default', '1080i', True, files=files)
 
     def onInit(self):
+        xbmc.executebuiltin('Container.SetViewMode(50)')
         # Need to clear the list of the default items
         self.clearList()
 
