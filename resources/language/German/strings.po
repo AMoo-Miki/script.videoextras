@@ -50,7 +50,7 @@ msgstr "Extras Dateinamensschlagwort"
 
 msgctxt "#32006"
 msgid "Menu to show after playing an extra"
-msgstr "Menü, das nach der Wiedergabe eines Extras angezeigt werden soll"
+msgstr "Anzuzeigendes Menüs nach Wiedergabe eines Extras"
 
 msgctxt "#32007"
 msgid "Video Selection"
@@ -130,7 +130,7 @@ msgstr "Detaillierten Listenbildschirm verwenden"
 
 msgctxt "#32026"
 msgid "Window to show after exiting detailed list"
-msgstr "Fenster, das nach dem Verlassen der Detailliste angezeigt werden soll"
+msgstr "Anzuzeigendes Fenster nach Verlassen der Detailliste"
 
 msgctxt "#32027"
 msgid "Allow caching of extras on startup"
