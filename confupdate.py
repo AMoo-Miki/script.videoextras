@@ -175,8 +175,7 @@ class ConfUpdate():
 \t\t\t\t\t\t<include>ButtonInfoDialogsCommonValues</include>
 \t\t\t\t\t\t<label>$ADDON[script.videoextras 32001]</label>
 \t\t\t\t\t\t<onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
-\t\t\t\t\t\t<visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>'''
-
+\t\t\t\t\t\t<visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>'''
         insertTxt = previousButton + (DIALOG_VIDEO_INFO_BUTTON % idval)
         dialogXmlStr = dialogXmlStr.replace(previousButton, insertTxt)
 
