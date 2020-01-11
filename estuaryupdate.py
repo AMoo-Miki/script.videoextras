@@ -99,7 +99,7 @@ class EstuaryUpdate():
         dialogXmlStr = dialogXmlStr.replace(previousOnLoad, insertTxt)
 
         # Now we need to add the button after the Final button
-        previousButton = '<param name="label" value="$LOCALIZE[208]" />'
+        previousButton = '<param name="label" value="$VAR[VideoInfoPlayButtonLabelVar]" />'
 
         if previousButton not in dialogXmlStr:
             # The file has had a standard component deleted, so quit
