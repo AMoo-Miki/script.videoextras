@@ -252,6 +252,21 @@ class BaseExtrasItem():
         displayName = os_path_split(filename)[1]
         # Remove the file extension (e.g .avi)
         displayName = os.path.splitext(displayName)[0]
+
+        # Add path
+        orgString, success, tailString = self.directory.rpartition("Extras")
+        if not success:
+            orgString, success, tailString = self.directory.rpartition("Featurettes")
+
+        if tailString:
+            orgString, success, parentString = tailString.rpartition("/")
+            if not success:
+                orgString, success, parentString = tailString.rpartition("\\")
+
+            displayName = parentString + "\\" + displayName
+        else:
+            displayName = "\\" + displayName
+
         # Remove anything before the -extras- tag (if it exists)
         extrasTag = Settings.getExtrasFileTag()
         if (extrasTag != "") and (extrasTag in displayName):

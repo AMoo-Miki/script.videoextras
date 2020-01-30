@@ -254,7 +254,12 @@ class VideoExtrasFinder():
         else:
             # Add the name of the extras directory to the end of the path
             extrasDir = os_path_join(basepath, Settings.getExtrasDirName())
+
+        if not dir_exists(extrasDir):
+            extrasDir = os_path_join(basepath, "Featurettes")
+
         log("VideoExtrasFinder: Checking existence for %s" % extrasDir)
+
         extras = []
         # Check if the extras directory exists
         if dir_exists(extrasDir):
